@@ -19,14 +19,14 @@ const plugins = [
     options: {
       path: `${__dirname}/src/locales`,
       languages,
-      defaultLanguage: 'en-us',
+      defaultLanguage: 'en',
       redirect: true,
     },
   },
   {
     resolve: 'gatsby-plugin-google-fonts',
     options: {
-      fonts: [`Lora:400,700`],
+      fonts: [`Montserrat:300,500`],
       display: 'swap',
     },
   },
