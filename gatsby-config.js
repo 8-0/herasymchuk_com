@@ -19,7 +19,7 @@ const plugins = [
     options: {
       path: `${__dirname}/src/locales`,
       languages,
-      defaultLanguage: 'en',
+      defaultLanguage: 'uk',
       redirect: true,
     },
   },

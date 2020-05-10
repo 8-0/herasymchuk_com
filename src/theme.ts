@@ -3,7 +3,8 @@ import { Theme } from '@theme/styled';
 const theme: Theme = {
   color: {
     primary: '#ffcc00',
-    secondary: '#008489',
+    // secondary: '#008489',
+    secondary: 'rgb(237,31,36)',
     tertiary: '#f39b84',
     gray: {
       lightest: '#faf8f5',

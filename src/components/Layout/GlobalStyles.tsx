@@ -1,7 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { normalize, rem } from 'polished';
-
 import { above, spacer } from '~/utils/styles';
 
 const GlobalStyles: React.FC = () => {
@@ -12,8 +11,8 @@ const GlobalStyles: React.FC = () => {
 
         html,
           body {
-          font-family: 'neue-haas-unica', serif;
-          font-weight: 400;
+          font-family: 'Montserrat', serif;
+          font-weight: 500;
           color: ${theme.color.text.body};
           line-height: 1.5;
           box-sizing: border-box;
@@ -32,8 +31,8 @@ const GlobalStyles: React.FC = () => {
         h4,
         h5,
         h6 {
-          font-family: 'Lora', serif;
-          font-weight: 600;
+          font-family: 'Montserrat', serif;
+          font-weight: 300;
           line-height: 1.3;
           color: ${theme.color.text.heading};
           margin-top: 0;

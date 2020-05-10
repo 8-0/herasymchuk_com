@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 
 import GlobalStyles from './GlobalStyles';
+import Header from './header';
 
 type Props = {};
 
@@ -14,6 +15,7 @@ const DefaultLayout: React.FC<Props> = ({
   return (
     <>
       <GlobalStyles />
+      <Header title='foo'/>
       <div
         css={css`
           overflow: hidden;
