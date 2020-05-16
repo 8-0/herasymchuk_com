@@ -3,7 +3,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 
 import GlobalStyles from './GlobalStyles';
-import Header from './header';
+import Header from './Header';
 
 type Props = {};
 

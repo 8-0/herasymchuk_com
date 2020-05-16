@@ -1,12 +1,11 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { IntlContextConsumer, Link, changeLocale } from 'gatsby-plugin-intl'
+import { IntlContextConsumer, Link, changeLocale, FormattedMessage } from 'gatsby-plugin-intl'
 import SocialIcons from './SocialIcons'
-
+import Button from '../Button/Button'
 const StyledHeader = styled.header`
   color: rgba(255,255,255, 0.5); // FIXME
   background-color: rgb(47,47,47); // FIXME
-  font-weight: 300;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -19,6 +18,7 @@ const HeaderInnerFirst = styled.div`
   flex-grow: 1;
   min-width: 100vw;
   & a {
+    // cursor: pointer;
     color: lightgrey;
     flex-grow: 8;
     &: hover{
@@ -40,7 +40,14 @@ const HeaderInnerFirst = styled.div`
 const HeaderInnerSecond = styled.div`
   padding: 0.5rem 2rem;
   background-color: white; // FIXME
-  min-width: 100vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  align-content: stretch;
 `
 
 const HomepageLink = styled(Link)`
@@ -59,6 +66,10 @@ const HomepageLink = styled(Link)`
   // &: focus {
   // text - decoration: none;
 }
+`
+
+const NavLink = styled(Link)`
+padding: 1rem;
 `
 
 interface HeaderProps {
@@ -97,6 +108,12 @@ const Header: React.FC<HeaderProps> = ({ }) => (
           {({ language }) => <img src={`/logo_${language}.png`} alt='HSS logo'/> }
         </IntlContextConsumer>
       </HomepageLink>
+      <div>
+        <Button as={Link} to='/about'><FormattedMessage id='about.title'/></Button>
+        <Button as={Link} variant="outline" color="secondary" to='/contact'><FormattedMessage id='contact.title'/></Button>
+        <Button as={Link} variant="outline" to='/expertise'><FormattedMessage id='expertise.title'/></Button>
+        <NavLink to='/pricing'><FormattedMessage id='pricing.title'/></NavLink>
+      </div>
     </HeaderInnerSecond>
     {/* <div>{title}</div> */}
   </StyledHeader >

@@ -1,5 +1,9 @@
 {
   "homepage.title": "Sergiy Herasymchuk Law Office",
+  "about.title": "About us",
+  "contact.title": "Contacts",
+  "pricing.title": "Pricing",
+  "expertise.title": "Expertise",
   "greeting": "Hello!",
   "auth.login": "Login"
 }

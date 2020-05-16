@@ -1,5 +1,9 @@
 {
   "homepage.title": "Адвокатское бюро Сергея Герасимчука",
+    "about.title": "Про нас",
+    "contact.title": "Контакти",
+    "pricing.title": "Стоимость наших услуг",
+    "expertise.title": "Экспертиза",
   "greeting": "Привет!",
   "auth.login": "Login"
 }
