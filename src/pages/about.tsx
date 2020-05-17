@@ -3,18 +3,17 @@ import React from 'react';
 // import { css } from '@emotion/core';
 import {
   injectIntl,
-  FormattedMessage,
-  InjectedIntlProps,
+  IntlShape
 } from 'gatsby-plugin-intl';
 
 import { Layout } from '~/components/Layout';
 import { SEO } from '~/components/SEO';
 
-const Index: React.FC<InjectedIntlProps> = ({ intl }) => {
+const Index: React.FC<{ intl: IntlShape}> = ({ intl: {formatMessage} }) => {
   return (
     <Layout>
-      <SEO title={intl.formatMessage({ id: 'about.title' })} />
-      <h1>{intl.formatMessage({ id: 'about.title' })}</h1>
+      <SEO title={formatMessage({ id: 'about.title' })} />
+      <h1>{formatMessage({ id: 'about.title' })}</h1>
     </Layout>
   );
 };

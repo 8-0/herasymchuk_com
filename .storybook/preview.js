@@ -5,10 +5,6 @@ import { action } from '@storybook/addon-actions';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
-import { addLocaleData } from 'gatsby-plugin-intl';
-import enLocaleData from 'react-intl/locale-data/en';
-import esLocaleData from 'react-intl/locale-data/es';
-
 import { EmotionThemeProvider, GatsbyIntlProvider } from './decorators';
 import GlobalStyles from '../src/components/Layout/GlobalStyles';
 
@@ -55,13 +51,13 @@ addDecorator(EmotionThemeProvider);
 
 // gatsby-plugin-intl Provider ================
 // Set supported locales
-export const locales = ['en-us', 'es-es'];
+export const locales = ['en-us', 'ru-ru', 'uk-ua'];
 
 // Import translation messages
 export const messages = locales.reduce((acc, locale) => {
   return {
     ...acc,
-    [locale]: require(`../src/locales/${locale}.json`),
+    [locale]: require(`../src/locales/${locale.substr(0, 2)}.json`),
   };
 }, {});
 
@@ -74,12 +70,9 @@ setIntlConfig({
   getMessages,
 });
 
-// Load the locale data for all your supported locales
-addLocaleData(enLocaleData);
-addLocaleData(esLocaleData);
-
 // Register decorators
 // Adds gatsby-plugin-intl IntlContextProvider which wraps the Gatsby Link component
 addDecorator(GatsbyIntlProvider);
+
 // Adds react-intl
 addDecorator(withIntl);

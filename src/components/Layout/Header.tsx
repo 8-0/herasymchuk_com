@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ }) => (
                 style={{
                   color: currentLocale === language ? `yellow` : `white`,
                   margin: 10,
-                  'text-transform': 'uppercase',
+                  textTransform: 'uppercase',
                   cursor: `pointer`,
                 }}
               >

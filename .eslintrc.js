@@ -171,6 +171,14 @@ module.exports = {
       files: ['**/test-utils/*.{js,ts,tsx}', '**/**/*.test.{js,ts,tsx}'],
       // Allow `jest` global
       extends: ['plugin:jest/recommended'],
+
+      //FOOO
+      env: {
+        jest: true
+      },
+      /// EoFOO
+
+
       rules: {
         // Allow import devDependencies in tests
         'import/no-extraneous-dependencies': 0,
