@@ -65,9 +65,9 @@ const createStyles = (
     position: relative;
     display: inline-block;
     font-size: ${rem('18px')};
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
-    padding: ${spacer(2)} ${spacer(4)};
+    padding: ${spacer(2)} ${spacer(6)};
     border-radius: ${theme.shape.borderRadius.large}px;
     color: ${theme.color.text.heading};
     background-color: ${theme.color[color]};
@@ -75,13 +75,13 @@ const createStyles = (
     cursor: pointer;
     line-height: 1.25;
 
-    &:hover {
-      background-color: ${interactionColors.hover[color][variant]};
-    }
+    // &:hover {
+    //   background-color: ${interactionColors.hover[color][variant]};
+    // }
 
-    &:active {
-      background-color: ${interactionColors.active[color][variant]};
-    }
+    // &:active {
+    //   background-color: ${interactionColors.active[color][variant]};
+    // }
 
     &:disabled {
       background-color:  ${theme.color.disabled};
@@ -90,7 +90,7 @@ const createStyles = (
     ${above(
       'sm',
       css`
-        padding: ${spacer(2)} ${spacer(6)};
+        padding: ${spacer(2)} ${spacer(4)};
       `
     )}
 
@@ -98,7 +98,7 @@ const createStyles = (
     ${size === 'small' &&
       css`
         padding: ${spacer()} ${spacer(3)};
-        font-size: ${rem('16px')};
+        font-size: ${rem('13px')};
 
         ${above(
           'sm',
@@ -127,10 +127,10 @@ const createStyles = (
             ? theme.color.text.heading
             : theme.color.secondary};
 
-        &:hover,
-        &:active {
-          color: #fff;
-        }
+        // &:hover,
+        // &:active {
+        //   color: #fff;
+        // }
       `}
   `;
 };

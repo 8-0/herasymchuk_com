@@ -9,7 +9,7 @@ export default {
 };
 
 export const AsLink = () => (
-  <Button as={Link} to="test" isLoading>
+  <Button as={Link} to="test">
     <FormattedMessage id="auth.login" />
   </Button>
 );
@@ -21,13 +21,19 @@ export const Loading = () => (
 );
 
 export const Outline = () => (
-  <Button isLoading variant="outline">
+  <Button variant="outline">
     <FormattedMessage id="auth.login" />
   </Button>
 );
 
 export const Secondary = () => (
   <Button color="secondary">
+    <FormattedMessage id="auth.login" />
+  </Button>
+);
+
+export const Tertiary = () => (
+  <Button color="tertiary">
     <FormattedMessage id="auth.login" />
   </Button>
 );

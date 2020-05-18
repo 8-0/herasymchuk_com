@@ -1,9 +1,10 @@
 {
   "homepage.title": "Адвокатське бюро Сергія Герасимчука",
-    "about.title": "TBD",
-    "contact.title": "Contacts",
-    "pricing.title": "Вартість наших послуг",
-    "expertise.title": "Експертиза",
+  "about.title": "Про нас",
+  "contact.title": "Contacts",
+  "pricing.title": "Вартість наших послуг",
+  "expertise.title": "Експертиза",
+  "contact_form.title": "Запис на першу консультацію",
   "greeting": "Вітаю!",
   "auth.login": "Login"
 }

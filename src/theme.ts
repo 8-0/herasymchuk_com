@@ -2,10 +2,13 @@ import { Theme } from '@theme/styled';
 
 const theme: Theme = {
   color: {
-    primary: '#ffcc00',
+    primary: '#f00',
     // secondary: '#008489',
+    // secondary: 'rgb(237,31,36)',
+    // tertiary: '#f39b84',
     secondary: 'rgb(237,31,36)',
-    tertiary: '#f39b84',
+    // tertiary: '#75706b',
+    tertiary: '#fff',
     gray: {
       lightest: '#faf8f5',
       light: '#e2dedc',
@@ -31,9 +34,9 @@ const theme: Theme = {
   },
   shape: {
     borderRadius: {
-      small: 4,
-      medium: 6,
-      large: 32,
+      small: 0,
+      medium: 0,
+      large:  0,
     },
   },
 };

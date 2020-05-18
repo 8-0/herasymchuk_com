@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { IntlContextConsumer, Link, changeLocale, FormattedMessage } from 'gatsby-plugin-intl'
 import SocialIcons from './SocialIcons'
+import { rem } from 'polished';
 import Button from '../Button/Button'
 const StyledHeader = styled.header`
   color: rgba(255,255,255, 0.5); // FIXME
@@ -38,7 +39,7 @@ const HeaderInnerFirst = styled.div`
 `
 
 const HeaderInnerSecond = styled.div`
-  padding: 0.5rem 2rem;
+  padding:  2rem;
   background-color: white; // FIXME
   width: 100%;
   display: flex;
@@ -59,8 +60,7 @@ const HomepageLink = styled(Link)`
   display: block;
 
   & img {
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 90%;
   }
   // &: hover,
   // &: focus {
@@ -69,7 +69,10 @@ const HomepageLink = styled(Link)`
 `
 
 const NavLink = styled(Link)`
-padding: 1rem;
+padding: 1rem ;
+font-size: ${rem('13px')};
+color: black;
+font-weight: 300;
 `
 
 interface HeaderProps {
@@ -88,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ }) => (
                 key={language}
                 onClick={() => changeLocale(language)}
                 style={{
-                  color: currentLocale === language ? `yellow` : `white`,
+                  color: currentLocale === language ? `darkgrey` : `white`,
                   margin: 10,
                   textTransform: 'uppercase',
                   cursor: `pointer`,
@@ -109,10 +112,11 @@ const Header: React.FC<HeaderProps> = ({ }) => (
         </IntlContextConsumer>
       </HomepageLink>
       <div>
-        <Button as={Link} to='/about'><FormattedMessage id='about.title'/></Button>
-        <Button as={Link} variant="outline" color="secondary" to='/contact'><FormattedMessage id='contact.title'/></Button>
-        <Button as={Link} variant="outline" to='/expertise'><FormattedMessage id='expertise.title'/></Button>
+        <NavLink to='/about'><FormattedMessage id='about.title'/></NavLink>
+        <NavLink to='/expertise'><FormattedMessage id='expertise.title'/></NavLink>
         <NavLink to='/pricing'><FormattedMessage id='pricing.title'/></NavLink>
+        <NavLink to='/contact'><FormattedMessage id='contact.title'/></NavLink>
+        <Button as={Link} size="small" color="secondary" to='#contact_form'><FormattedMessage id='contact_form.title' /></Button>
       </div>
     </HeaderInnerSecond>
     {/* <div>{title}</div> */}
