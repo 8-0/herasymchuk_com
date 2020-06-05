@@ -4,6 +4,7 @@ import { IntlContextConsumer, Link, changeLocale, FormattedMessage } from 'gatsb
 import SocialIcons from './SocialIcons'
 import { rem } from 'polished';
 import Button from '../Button/Button'
+
 const StyledHeader = styled.header`
   color: rgba(255,255,255, 0.5); // FIXME
   background-color: rgb(47,47,47); // FIXME
@@ -39,7 +40,7 @@ const HeaderInnerFirst = styled.div`
 `
 
 const HeaderInnerSecond = styled.div`
-  padding:  2rem;
+  padding:  0.5rem 10rem;
   background-color: white; // FIXME
   width: 100%;
   display: flex;
@@ -61,6 +62,7 @@ const HomepageLink = styled(Link)`
 
   & img {
     max-height: 90%;
+    max-width: unset;
   }
   // &: hover,
   // &: focus {

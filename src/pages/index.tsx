@@ -1,4 +1,5 @@
 import React from 'react';
+import { Hero } from '../components/Hero'
 // import styled from '@emotion/styled';
 // import { css } from '@emotion/core';
 import {
@@ -13,7 +14,7 @@ const Index: React.FC<{ intl: IntlShape }> = ({ intl: { formatMessage } }) => {
   return (
     <Layout>
       <SEO title={formatMessage({ id: 'homepage.title' })} />
-      <h1>{formatMessage({ id: 'greeting' })}</h1>
+      <Hero title={formatMessage({ id: 'home.hero.title' })} subtitle={formatMessage({ id: 'home.hero.subtitle' })} />
     </Layout>
   );
 };

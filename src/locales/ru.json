@@ -4,6 +4,13 @@
     "contact.title": "Контакти",
     "pricing.title": "Стоимость наших услуг",
     "expertise.title": "Экспертиза",
+
+"home.hero.title": "Наш опыт - залог вашей уверенности",
+"home.hero.subtitle": "Мы поддерживаем клиентов более 10 лет",
+
   "greeting": "Привет!",
   "auth.login": "Login"
+
+
+
 }

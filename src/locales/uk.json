@@ -5,6 +5,11 @@
   "pricing.title": "Вартість наших послуг",
   "expertise.title": "Експертиза",
   "contact_form.title": "Запис на першу консультацію",
+
+
+  "home.hero.title": "Наш досвід є запорукою вашої впевненості",
+  "home.hero.subtitle": "Ми підтримуємо клієнтів більше 10 років",
+
   "greeting": "Вітаю!",
   "auth.login": "Login"
 }

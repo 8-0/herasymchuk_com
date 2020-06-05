@@ -4,6 +4,11 @@
   "contact.title": "Contacts",
   "pricing.title": "Pricing",
   "expertise.title": "Expertise",
+
+  "home.hero.title": "Our experience is the key to your confidence",
+  "home.hero.subtitle": "We support clients for over 10 years",
+
+  "contact_form.title":"Apply for an enrty consult",
   "greeting": "Hello!",
   "auth.login": "Login"
 }
