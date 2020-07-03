@@ -48,19 +48,31 @@ exports.createPages = ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: '/pro-nas',
-    toPath: '/ua/contact',
+    toPath: '/ua/about',
     isPermanent: true,
   });
 
   createRedirect({
     fromPath: '/o-nas',
-    toPath: '/ru/contact',
+    toPath: '/ru/about',
     isPermanent: true,
   });
 
   createRedirect({
     fromPath: '/contacts',
     toPath: '/en/contact',
+    isPermanent: true,
+  });
+
+  createRedirect({
+    fromPath: '/kontakti',
+    toPath: '/ru/contact',
+    isPermanent: true,
+  });
+
+  createRedirect({
+    fromPath: '/kontakty',
+    toPath: '/ru/contact',
     isPermanent: true,
   });
 
