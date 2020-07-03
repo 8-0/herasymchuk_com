@@ -30,6 +30,7 @@ const plugins = [
       display: 'swap',
     },
   },
+  'gatsby-plugin-client-side-redirect',
 ];
 
 // Bundle analyzer, dev only
