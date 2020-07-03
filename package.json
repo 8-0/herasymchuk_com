@@ -60,10 +60,12 @@
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-transformer-sharp": "^2.3.14",
+    "mapbox-gl": "^1.11.0",
     "polished": "^3.4.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-mapbox-gl": "^4.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
