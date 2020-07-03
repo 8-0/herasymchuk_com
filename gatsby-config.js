@@ -24,6 +24,12 @@ const plugins = [
     },
   },
   {
+    resolve: 'gatsby-plugin-robots-txt',
+    options: {
+      policy: [{ userAgent: '*', disallow: '/' }]
+    }
+  },
+  {
     resolve: 'gatsby-plugin-google-fonts',
     options: {
       fonts: [`Montserrat:300,500`],
