@@ -26,8 +26,8 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-robots-txt',
     options: {
-      policy: [{ userAgent: '*', disallow: '/' }]
-    }
+      policy: [{ userAgent: '*', disallow: '/' }],
+    },
   },
   {
     resolve: 'gatsby-plugin-google-fonts',
@@ -47,7 +47,7 @@ if (process.env.ENABLE_BUNDLE_ANALYZER === '1') {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://h.koncord.dp.ua/'
+    siteUrl: 'https://h.koncord.dp.ua/',
   },
   plugins,
 };
