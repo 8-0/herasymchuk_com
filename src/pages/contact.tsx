@@ -16,6 +16,7 @@ const Map = ReactMapboxGl({
   accessToken:
     'pk.eyJ1IjoiZDFiIiwiYSI6ImNrYzYzaTAwZDBsOHIyenFwN2QwdXl2dzgifQ.N1j4A2iPdVmn2oiA43Rwaw'
 });
+const location = [35.0235, 48.4685];
 const Contact: React.FC<{ intl: IntlShape }> = ({ intl: { formatMessage } }) => {
   return (
     <Layout>
@@ -24,23 +25,16 @@ const Contact: React.FC<{ intl: IntlShape }> = ({ intl: { formatMessage } }) => 
 
       <Map
         style="mapbox://styles/mapbox/streets-v9"
-        center={[ 35.0235, 48.4691]}
-        zoom={[13]}
+        center={location}
+        zoom={[11.5]}
         containerStyle={{
           height: '50vh',
-          width: '50vw'
+          width: '50vw',
         }}
-        >
-        <Marker
-          coordinates={[ 35.0235, 48.4691]}
-          anchor="bottom">
-              <div style={{width: '2.5rem'}}>
-                <MarkerIcon style={{position: 'fixed', zIndex: 1}}/>
-                <IntlContextConsumer>
-                  {({ language }) => <img src={`/logo_${language}.png`} alt='HSS logo' style={{position: 'fixed', zIndex: 2, width:'1.3rem', left:'0.6rem',
-    top: '0.15rem'}}/> }
-                </IntlContextConsumer>
-              </div>
+      >
+        <Marker coordinates={location} anchor="bottom" style={{
+          width: '2rem', height: '2rem',
+          backgroundImage:'url("/marker.svg")'}}  >
         </Marker>
       </Map>
     </Layout>
