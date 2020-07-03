@@ -31,6 +31,7 @@ const plugins = [
     },
   },
   'gatsby-plugin-client-side-redirect',
+  'gatsby-plugin-cname',
 ];
 
 // Bundle analyzer, dev only
@@ -39,5 +40,8 @@ if (process.env.ENABLE_BUNDLE_ANALYZER === '1') {
 }
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://h.koncord.dp.ua/'
+  },
   plugins,
 };

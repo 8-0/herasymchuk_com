@@ -39,6 +39,10 @@ exports.onCreateWebpackConfig = function addPathMapping({
 };
 
 exports.createPages = ({ graphql, actions }) => {
-  const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
-  createRedirect({ fromPath: '/stoimost', toPath: '/ru/pricing', isPermanent: true });
+  const { createRedirect } = actions; //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  createRedirect({
+    fromPath: '/stoimost',
+    toPath: '/ru/pricing',
+    isPermanent: true,
+  });
 };
