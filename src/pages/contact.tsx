@@ -1,14 +1,11 @@
 import React from 'react';
 
 import GoogleMapReact from 'google-map-react';
-import { ReactComponent as Marker } from '~/icons/marker.svg';
-
 
 const isClient = typeof window !== 'undefined';
 // import styled from '@emotion/styled';
 // import { css } from '@emotion/core';
 import {
-  IntlContextConsumer,
   injectIntl,
   IntlShape
 } from 'gatsby-plugin-intl';
@@ -22,22 +19,24 @@ const Contact: React.FC<{ intl: IntlShape }> = ({ intl: { formatMessage } }) => 
     <Layout>
       <SEO title={formatMessage({ id: 'contact.title' })} />
       <h1>{formatMessage({ id: 'contact.title' })}</h1>
-      {isClient && (
-        <div style={{ height: '100vh', width: '100%' }}>
+
+      <section className="google-map">
+      <div className="map">
+        { isClient && (
           <GoogleMapReact
             bootstrapURLKeys={{ key: API_KEY }}
-            defaultCenter={[48.4691, 35.0235]}
-            defaultZoom={15}
+            defaultCenter={[1, 1]}
+            defaultZoom={1}
           >
-            <div style={{position: 'absolute', transform: 'translate(-50%, -50%)'}}>
-            <Marker/>
-            <IntlContextConsumer>
-              {({ language }) => <img src={`/logo_${language}.png`} alt='HSS logo' style={{ width: '3rem'}}/> }
-            </IntlContextConsumer>
-            </div>
+            <div
+              className="marker"
+              lat={1}
+              lng={1}
+            />
           </GoogleMapReact>
-        </div>
-      )}
+        )}
+      </div>
+    </section>
     </Layout>
   );
 };
