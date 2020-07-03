@@ -14,6 +14,8 @@ const Index: React.FC<{ intl: IntlShape}> = ({ intl: {formatMessage} }) => {
     <Layout>
       <SEO title={formatMessage({ id: 'about.title' })} />
       <h1>{formatMessage({ id: 'about.title' })}</h1>
+
+      <pre>{formatMessage({ id: 'about.main' })}</pre>
     </Layout>
   );
 };
