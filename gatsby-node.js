@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: '/pro-nas',
-    toPath: '/ua/about',
+    toPath: '/uk/about',
     isPermanent: true,
   });
 
@@ -90,7 +90,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: '/vartist',
-    toPath: '/ua/pricing',
+    toPath: '/uk/pricing',
     isPermanent: true,
   });
 
