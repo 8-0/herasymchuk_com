@@ -4,11 +4,12 @@
   "contact.title": "Contacts",
   "pricing.title": "Pricing",
   "expertise.title": "Expertise",
+  "about.main": "Our advantages are: the experience of working in state authorities in Ukraine and abroad, a systematic approach to studying each case, identifying risks and",
 
   "home.hero.title": "Our experience is the key to your confidence",
   "home.hero.subtitle": "We support clients for over 10 years",
 
-  "contact_form.title":"Apply for an enrty consult",
+  "contact_form.title": "Apply for an enrty consult",
   "greeting": "Hello!",
   "auth.login": "Login"
 }
