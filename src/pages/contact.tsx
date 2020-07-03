@@ -10,7 +10,6 @@ import {
 import { Layout } from '~/components/Layout';
 import { SEO } from '~/components/SEO';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
-import { ReactComponent as MarkerIcon } from '~/icons/marker.svg';
 
 const Map = ReactMapboxGl({
   accessToken:
@@ -32,25 +31,34 @@ const changeLocale = function(locale: any) {
   };
 };
 
-const location = [35.0235, 48.4685];
+const location:[number, number] = [35.0235, 48.4685];
 const Contact: React.FC<{ intl: IntlShape }> = ({ intl: { formatMessage } }) => {
   return (
     <Layout>
       <SEO title={formatMessage({ id: 'contact.title' })} />
       <h1>{formatMessage({ id: 'contact.title' })}</h1>
       <IntlContextConsumer>
-        {({ languages, language: currentLocale }) => (
-          <Map style="mapbox://styles/mapbox/streets-v11" onStyleLoad={changeLocale(currentLocale)} center={location} zoom={[11.5]} containerStyle={{  height: '50vh', width: '50vw'  }}>
+        {({ language: currentLocale }) => (
+          <Map
+            style="mapbox://styles/mapbox/streets-v11"
+                      onStyleLoad={changeLocale(currentLocale)}
+            center={location}
+            zoom={[11.5]}
+            containerStyle={{ height: '50vh', width: '50vw'}
+          }
+          >
             <Marker
               coordinates={location}
               anchor="bottom"
               style={{
                 width: '4rem',
                 height: '4rem',
-                backgroundImage: 'url("/marker.svg")'}}/>
+                backgroundImage: 'url("/marker.svg")',
+              }}
+            />
           </Map>
         )}
-    </IntlContextConsumer>
+          </IntlContextConsumer>
     </Layout>
   );
 };
