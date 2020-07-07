@@ -10,6 +10,7 @@ const plugins = [
   'gatsby-plugin-react-helmet',
   'gatsby-transformer-sharp',
   'gatsby-plugin-sharp',
+  'gatsby-plugin-sitemap',
   'gatsby-plugin-typescript',
   'gatsby-plugin-emotion',
   'gatsby-plugin-remove-serviceworker',
