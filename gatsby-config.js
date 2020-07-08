@@ -48,7 +48,7 @@ if (process.env.ENABLE_BUNDLE_ANALYZER === '1') {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://herasymchuk.com/',
+    siteUrl: process.env.GATSBY_SITE_URL,
   },
   plugins,
 };
