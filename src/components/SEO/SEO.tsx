@@ -12,7 +12,12 @@ type Props = {
 /**
  * An SEO component that handles all element in the head that can accept
  */
-const SEO: React.FC<Props> = ({ children, description = '', title, intl:{ locale} }) => {
+const SEO: React.FC<Props> = ({
+  children,
+  description = '',
+  title,
+  intl: { locale },
+}) => {
   const metaDescription = description || 'Welcome to my website';
 
   return (
@@ -36,8 +41,12 @@ const SEO: React.FC<Props> = ({ children, description = '', title, intl:{ locale
           <meta property="og:title" content={title} />
           <meta property="og:description" content={metaDescription} />
           <meta property="og:locale" content={locale} />
-          <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />
-
+          {location.pathname.match(/\/contact$/) && (
+            <link
+              href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+              rel="stylesheet"
+            />
+          )}
           {children}
         </Helmet>
       )}
