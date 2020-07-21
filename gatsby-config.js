@@ -17,6 +17,14 @@ const plugins = [
   'gatsby-plugin-remove-serviceworker',
   'gatsby-plugin-svgr',
   {
+    resolve: `gatsby-plugin-sharp`,
+    options: {
+      useMozJpeg: true,
+      stripMetadata: true,
+      defaultQuality: 75,
+    },
+  },
+  {
     resolve: 'gatsby-plugin-intl',
     options: {
       path: `${__dirname}/src/locales`,
