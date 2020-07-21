@@ -5,6 +5,7 @@ require('dotenv').config({
 const supportedLanguages = require('./src/utils/i18n/supportedLanguages');
 
 const languages = supportedLanguages.map(language => language.languageTag);
+const path = require('path');
 
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -16,6 +17,13 @@ const plugins = [
   'gatsby-plugin-preload-link-crossorigin',
   'gatsby-plugin-remove-serviceworker',
   'gatsby-plugin-svgr',
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'images',
+      path: path.join(__dirname, `src`, `images`),
+    },
+  },
   {
     resolve: `gatsby-plugin-sharp`,
     options: {
