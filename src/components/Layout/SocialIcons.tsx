@@ -1,8 +1,17 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { above } from '~/utils/styles';
+import { css } from '@emotion/core';
 
 const StyledSocialIcons = styled.ul`
-display: flex;
+
+${above(
+  'sm',
+  css`
+    display: flex;
+  `
+)}
+display: none;
 margin-bottom: -15px;
 margin-right: -7.5px;
 margin-left: -7.5px;
