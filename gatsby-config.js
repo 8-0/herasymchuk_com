@@ -13,6 +13,7 @@ const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-typescript',
   'gatsby-plugin-emotion',
+  'gatsby-plugin-preload-link-crossorigin',
   'gatsby-plugin-remove-serviceworker',
   'gatsby-plugin-svgr',
   {
